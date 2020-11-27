@@ -1,0 +1,32 @@
+<template>
+  <MainVue msg="Hello Vue 3 in CodeSandbox!" />
+</template>
+
+<script>
+import MainVue from "./components/MainVue";
+export default {
+  name: "App",
+  components: {
+    MainVue,
+  },
+};
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin: 0px;
+}
+html {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+</style>
