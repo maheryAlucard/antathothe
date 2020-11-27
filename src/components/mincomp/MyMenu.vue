@@ -4,6 +4,8 @@
 
 <script>
 import tippy from "tippy.js";
+import mitem from "./items/MenuButton";
+
 export default {
   props: ["isactive"],
   data() {
@@ -11,7 +13,8 @@ export default {
   },
   mounted: function () {
     tippy("#mybtn", {
-      content: "My tooltip!",
+      content: mitem,
+      allowHTML: true,
       theme: "tomato",
       inertia: true,
       animation: "rotate",
