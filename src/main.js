@@ -1,4 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import VueStripeMenu from "vue-stripe-menu";
 
-createApp(App).mount('#app')
+import "tippy.js/dist/tippy.css";
+import "bootstrap-css";
+
+createApp(App).use(VueStripeMenu).mount("#app");
