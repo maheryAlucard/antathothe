@@ -12,6 +12,18 @@ export default {
   mounted: function () {
     tippy("#mybtn", {
       content: "My tooltip!",
+      onMount(instance) {
+        const box = instance.popper.firstElementChild;
+        requestAnimationFrame(() => {
+          box.classList.add("animate__animated");
+          box.classList.add("animate__bounceIn");
+        });
+      },
+      onHidden(instance) {
+        const box = instance.popper.firstElementChild;
+        box.classList.remove("animate__animated");
+        box.classList.remove("animate__bounceOut");
+      },
     });
   },
 };
@@ -19,10 +31,15 @@ export default {
 
 <style scoped>
 .mybt {
+  padding: 10px;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
   border-style: none;
   border-width: 0px;
   margin: 0px;
+}
+.mybt:hover {
+  background-color: rgba(0, 0, 0, 0.35);
 }
 </style>

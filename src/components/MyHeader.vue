@@ -1,7 +1,9 @@
 <template>
   <div class="hcontainer">
     <h3 id="mytest">This is my title</h3>
-    <MyMenu />
+    <div class="menubtcont">
+      <MyMenu />
+    </div>
   </div>
 </template>
 
@@ -23,7 +25,13 @@ export default {
   padding: 20px 20px 0px 20px;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+}
+.menubtcont {
+  padding: 0px;
+  margin: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
 }
 </style>
