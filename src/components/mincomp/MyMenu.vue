@@ -4,7 +4,9 @@
 
 <script>
 import tippy from "tippy.js";
-import mitem from "./items/MenuButton";
+
+const myitem = `
+<p>Hello world</p>`;
 
 export default {
   props: ["isactive"],
@@ -13,7 +15,7 @@ export default {
   },
   mounted: function () {
     tippy("#mybtn", {
-      content: mitem,
+      content: myitem,
       allowHTML: true,
       theme: "tomato",
       inertia: true,
