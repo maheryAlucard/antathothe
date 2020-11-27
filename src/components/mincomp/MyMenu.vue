@@ -12,6 +12,9 @@ export default {
   mounted: function () {
     tippy("#mybtn", {
       content: "My tooltip!",
+      theme: "tomato",
+      inertia: true,
+      animation: "rotate",
       onMount(instance) {
         const box = instance.popper.firstElementChild;
         requestAnimationFrame(() => {
@@ -19,10 +22,12 @@ export default {
           box.classList.add("animate__bounceIn");
         });
       },
-      onHidden(instance) {
+      onHide(instance) {
         const box = instance.popper.firstElementChild;
-        box.classList.remove("animate__animated");
-        box.classList.remove("animate__bounceOut");
+        requestAnimationFrame(() => {
+          box.classList.remove("animate__animated");
+          box.classList.remove("animate__bounceOut");
+        });
       },
     });
   },
