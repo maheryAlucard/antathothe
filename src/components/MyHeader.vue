@@ -2,18 +2,31 @@
   <div class="hcontainer">
     <h3 id="mytest">This is my title</h3>
     <div class="menubtcont">
-      <MyMenu />
+      <MyMenu
+        v-for="(item, i) in MyBtnList"
+        :key="'mmn' + i"
+        :name="item.name"
+        :mdata="item.submen"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import MyMenuData from "../data/Menue.js";
 import MyMenu from "./mincomp/MyMenu";
 export default {
   components: {
     MyMenu,
   },
-  mounted: function () {},
+  data: function () {
+    return {
+      MyBtnList: [],
+    };
+  },
+  mounted: function () {
+    this.MyBtnList = MyMenuData.mainemenu.content;
+  },
 };
 </script>
 
@@ -28,10 +41,12 @@ export default {
   justify-content: space-between;
 }
 .menubtcont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   padding: 0px;
   margin: 0px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  overflow: hidden;
 }
 </style>

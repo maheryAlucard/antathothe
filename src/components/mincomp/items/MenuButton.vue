@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <button class="btn mbt">{{ gdata.btext }} my bt</button>
+  <div class="menDrop">
+    <p>this is a text</p>
   </div>
 </template>
 
@@ -12,9 +12,9 @@ export default {
 </script>
 
 <style scoped>
-.mbt {
-  background-color: rgba(0, 0, 0, 0);
-  border-style: none;
-  border-width: 0px;
+.menDrop {
+  border-radius: 5px;
+  background-color: #0ba2b0;
+  width: 200px;
 }
 </style>
