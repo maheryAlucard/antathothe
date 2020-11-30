@@ -1,20 +1,20 @@
 <template>
   <div>
-    <button class="btn mbt">{{gdata.btext}}</button>
+    <button class="btn mbt">{{ gdata.btext }} my bt</button>
   </div>
 </template>
 
 <script>
 export default {
-  props:["gdata"],
-
-}
+  name: "MenItem",
+  props: ["gdata"],
+};
 </script>
 
 <style scoped>
-.mbt{
+.mbt {
   background-color: rgba(0, 0, 0, 0);
-  border-style:none;
-  border-width:0px;
+  border-style: none;
+  border-width: 0px;
 }
 </style>

@@ -4,16 +4,22 @@
 
 <script>
 import tippy from "tippy.js";
-
-const myitem = `
-<p>Hello world</p>`;
+//import MenBt from "./items/MenuButton";
 
 export default {
   props: ["isactive"],
   data() {
-    return {};
+    return {
+      btcontent: {
+        btext: "this is my bt",
+      },
+    };
   },
+  components: {},
   mounted: function () {
+    const myitem =
+      `<button class="btn mbt">` + this.btcontent.btext + `my bt</button>`;
+
     tippy("#mybtn", {
       content: myitem,
       allowHTML: true,
@@ -52,5 +58,10 @@ export default {
 }
 .mybt:hover {
   background-color: rgba(0, 0, 0, 0.35);
+}
+.mbt {
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  border-width: 0px;
 }
 </style>

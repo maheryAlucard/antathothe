@@ -84,6 +84,12 @@ caption {
   color: #2c3e50;
   margin: 0px;
 }
+.mbt {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border-style: none;
+  border-width: 0px;
+}
 html {
   padding: 0px;
   margin: 0px;
