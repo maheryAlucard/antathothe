@@ -1,5 +1,5 @@
 {
-  "name": "anathothevue",
+  "name": "antathothe",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -46,5 +46,5 @@
     "not dead"
   ],
   "keywords": [],
-  "description": ""
+  "description": "anathothe web with vue.js"
 }

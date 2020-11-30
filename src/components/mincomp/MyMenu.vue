@@ -18,6 +18,7 @@ export default {
       content: myitem,
       allowHTML: true,
       theme: "tomato",
+      interactive: true,
       inertia: true,
       animation: "rotate",
       onMount(instance) {
