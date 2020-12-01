@@ -1,6 +1,8 @@
 <template>
   <div class="menDrop">
-    <p>this is a text</p>
+    <button v-for="(nitem, i) in gdata" :key="'mbtc' + i" class="btn mnbtn">
+      {{ nitem.name }}
+    </button>
   </div>
 </template>
 
@@ -14,7 +16,18 @@ export default {
 <style scoped>
 .menDrop {
   border-radius: 5px;
-  background-color: #0ba2b0;
+  background-color: #0d82b8;
   width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.mnbtn {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 246, 198);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mnbtn:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 </style>

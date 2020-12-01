@@ -9,14 +9,15 @@
       {{ name }}
     </button>
     <transition
-      enter-active-class="animate__animated animate__bounceIn"
-      leave-active-class="animate__animated animate__bounceOut"
+      enter-active-class="animate__animated animate__fadeInUp animate__faster"
+      leave-active-class="animate__animated animate__fadeOutDown animate__faster"
     >
       <MenBt
         @mouseenter="showMenue()"
         @mouseleave="hideMenue()"
-        v-if="showMenu"
+        v-if="showMenu && mdata.length > 0"
         class="menubt"
+        :gdata="mdata"
       />
     </transition>
   </div>
@@ -101,6 +102,7 @@ export default {
 .menubt {
   position: absolute;
   margin-top: 40px;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.17);
 }
 .contmen {
   display: flex;
